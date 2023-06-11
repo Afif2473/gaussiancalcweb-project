@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gaussian calculator</title>
+    <link href="style3.css" rel="stylesheet"/>
+</head>
+<body>
+    <section>
+        <div class="wrapper">
+            <nav class="navbar">
+                <img class="logo" src="upmlogo.png">
+                <ul></ul>
+            </nav>
+            <div class="center">
+                <h1>Welcome to Gaussian Calculator</h1>
+            </div>
+            <div id="btnContainer">
+                <button id="toggleButton" class="startBtn">Start</button>
+                <div id="targetElement" style="display: none;">
+                    <div class="container">
+                        <div class="switch">
+                            <div class="inverseBtn" onclick="tab1();">inverse</div>
+                            <div class="solveBtn" onclick="tab2();">solve</div>
+                        </div>
+                
+                        <div class="outer">
+                            <div id="form">
+                                <div id="page">
+                                    <div class="inverse">
+                                        <br><label class="h2">Choose size of matrix</label><br><br>
+                                        <!-- Input fields for matrix dimensions -->
+                                        <label for="rowsInputM" class="text">Number of Rows:</label>
+                                        <input type="number" id="rowsInputM" class="custom-input1"><br>
+                
+                                        <label for="colsInputM" class="text" >Number of Columns:</label>
+                                        <input type="number" id="colsInputM" class="custom-input1">
+                
+                                        <!-- Input fields for matrix elements -->
+                                        <div id="matrixInputM">
+                                        <!-- Matrix elements will be dynamically added here using JavaScript -->
+                                        </div>
+                                        <button id="submitBtn" class="button">Get inverse</button><br><br>
+                                        <div id="resultI" class="result"></div><br><br>
+                                    </div>
+                                    
+                                </div>
+                
+                                <div id="page">
+                                    <!-- HTML code to display the user interface -->
+                                    <label class="h2">Linear Equation Solver</label><br><br><br>
+
+                                    <label for="rowsInputLS" class="text">Enter the number of equations:</label>
+                                    <input type="number" id="rowsInputLS" class="custom-input2">
+                                    <button id="generateFieldsBtn" class="button">Next</button>
+
+                                    <div id="matrixInputLS" class="matrixInput"></div>
+                                    <div id="bInput"></div>
+
+                                    <button id="submitBtnSolve" class="button">Solve</button>
+
+                                    <div id="resultLS" class="result"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>               
+                </div>
+
+                <button id="toggleButton2" class="videoBtn">Video</button>
+                <div id="targetElement2" style="display: none;">
+                    <div class="interface3">
+                        <br><br><label class="h2">Tutorial of how to perform Gaussian Elimination</label><br><br>
+                        <video width="400" class="video" controls>
+                            <source src="Gaussian Elimination .mp4" type="video/mp4">
+                        </video>
+                        <p class="text2">
+                            <a href="https://youtu.be/eDb6iugi6Uk" target="_blank">click here</a>to go to source
+                        </p><br><br>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </section>   
+    <script src="program3.js"></script>
+</body>
+</html>

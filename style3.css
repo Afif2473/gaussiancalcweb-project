@@ -1,0 +1,248 @@
+body{
+    background-color: black;
+}
+
+.wrapper{
+    background: url(bg2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 0px -70px;
+    height: 200vh;
+    margin-bottom: 1%;
+}
+
+.navbar{
+    height: 80px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.logo{
+    width: 140px;
+    height: auto;
+    padding: 10px 100px;
+
+}
+
+#btnContainer {
+    display:grid;
+    justify-content: center;
+    margin-top: 400px;
+    gap: 20px;
+}
+
+.startBtn{
+    font-size: 50px;
+    margin: 0px 900px;
+    color: rgb(5, 10, 25);
+    border-radius: 40px;
+    background:rgb(134, 149, 167,0.7);
+    width: 200px;
+    font-family: Comic Sans MS;
+    transform: translateY(-40px);
+}
+
+.videoBtn{
+    font-size: 50px;
+    margin: 0px 900px;
+    color: rgb(5, 10, 25);
+    border-radius: 30px;
+    background:rgba(102, 119, 137, 0.7);
+    font-family: Comic Sans MS;
+}
+
+.h2{
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(165, 190, 213);
+    font-family: sans-serif;
+}
+
+label{
+    padding-left: 15px;
+    font-size: larger;
+}
+
+.text{
+    color: rgb(165, 190, 213);
+    font-size: 150%;
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+.text2{
+    color: rgb(165, 190, 213);;
+}
+
+.interface2{
+    width: 70%;
+    transform: translateY(-50px);
+    margin-left: 300px; ;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    
+}
+
+.interface3{
+    width: 60%;
+    transform: translateY(50px);
+    margin-left: 350px; ;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+}
+
+.center h1{
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    width: 900px;
+    text-align: center;
+    transform: translateY(-100px);
+}
+
+.matrixInput{
+    margin-top: 20px;
+    text-emphasis-color: white;
+}
+
+.button{
+    margin-top: 10px;
+    margin-left: 10px;
+    background : linear-gradient(45deg,#93e59e,#68aca0);
+    border-radius: 30px;
+    border-color: rgb(10, 80, 43);
+    font-size: 15px;
+}
+
+.result{
+    padding-left: 15px;
+    color:rgb(165, 190, 213);
+}
+
+.video{
+    margin-left: 15px;
+}
+
+.custom-input1{
+    margin-left: auto;
+    padding: 7px;
+    border: 0px solid;
+    font-size: 15px;
+    background-color: #55e5d093;
+    width: 20px;
+    border-radius: 20px;
+    
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.custom-input2{
+    margin-left: 10px;
+    padding: 3px;
+    border: 2px solid #0f2d1776;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: #70aa9e93;
+    width: 100px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.matrix-element {
+    margin-right: 30px;
+  }
+
+.container{
+    position: relative;
+    align-items: center;
+    padding: 50px 50px;
+    width: 60%;
+    transform: translateX(350px);
+    background: rgba(0, 0, 0, 0.8);
+}
+.switch{
+    position: absolute;
+    margin: 10px 530px;
+    display: flex;
+    background-color: rgb(89, 97, 89);
+    border-radius:40px ;
+    height:28px;
+    width: auto;
+    
+}
+
+.switch :after{
+    content: '';
+    height: 6px;
+    width: 60px;
+    border-radius: 60px 60px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    transition:1s ease ;
+}
+
+.switch .active:after{
+    left:82px;
+    width:70px;
+    background: #12ff00 ;
+}
+
+.inverseBtn{
+    background : linear-gradient(45deg,#93e59e,#68aca0);
+    padding: 5px 12px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+    text-align: right;
+    cursor: pointer;
+    transition: 0.3s ease;
+    height: fit-content;
+    font-family: sans-serif;
+}
+
+.solveBtn{
+    padding: 5px 12px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+    text-align: right;
+    cursor: pointer;
+    transition: 0.3s ease;
+    height: fit-content;
+    font-family: sans-serif;
+}
+
+
+.container .outer{
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.outer #form{
+    width: 200%;
+    position: relative;
+    display: flex;
+    margin: auto;
+    transition: 0.2s ease-in-out;
+}
+
+#page{
+    margin: auto;
+    width: 100%;
+}
