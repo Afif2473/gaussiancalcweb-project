@@ -271,17 +271,28 @@ label{
     font-size: large;
     }
 
+    .interface3{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .video{
+        margin-left: auto;
+        margin-right: auto;
+        width:200px
+    }
+
     .interface3 .h2{
         text-align: center;
     }
 
     .container{
-        position: relative;
+        position: inherit;
         box-sizing: border-box;
         align-items: center;
         width: 100%;
-        transform: translateX(-5px);
-        background: rgba(0, 0, 0, 0.8); 
+        transform: translateX(10px);
+        background: rgba(0, 0, 0, 0.8);
     }
 
     .switch{
