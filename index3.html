@@ -8,17 +8,17 @@
     <link href="style3.css" rel="stylesheet"/>
 </head>
 <body>
-    <section>
+    <section class="hm">
         <div class="wrapper">
             <nav class="navbar">
-                <img class="logo" src="upmlogo.png">
+                <img class="logo" src="upmlogo.png" style="size: 30%;">
                 <ul></ul>
             </nav>
             <div class="center">
                 <h1>Welcome to Gaussian Calculator</h1>
             </div>
-            <div id="btnContainer">
-                <button id="toggleButton" class="startBtn">Start</button>
+            <div class="everything" id="btnContainer">
+                <button type="button" id="toggleButton" class="startBtn">Start</button>
                 <div id="targetElement" style="display: none;">
                     <div class="container">
                         <div class="switch">
@@ -28,8 +28,7 @@
                 
                         <div class="outer">
                             <div id="form">
-                                <div id="page">
-                                    <div class="inverse">
+                                <div id="page" class="inverse">
                                         <br><label class="h2">Choose size of matrix</label><br><br>
                                         <!-- Input fields for matrix dimensions -->
                                         <label for="rowsInputM" class="text">Number of Rows:</label>
@@ -44,11 +43,9 @@
                                         </div>
                                         <button id="submitBtn" class="button">Get inverse</button><br><br>
                                         <div id="resultI" class="result"></div><br><br>
-                                    </div>
-                                    
                                 </div>
                 
-                                <div id="page">
+                                <div id="page" class="solve">
                                     <!-- HTML code to display the user interface -->
                                     <label class="h2">Linear Equation Solver</label><br><br><br>
 
@@ -69,11 +66,11 @@
                     </div>               
                 </div>
 
-                <button id="toggleButton2" class="videoBtn">Video</button>
+                <button type="button" id="toggleButton2" class="videoBtn">Video</button>
                 <div id="targetElement2" style="display: none;">
                     <div class="interface3">
                         <br><br><label class="h2">Tutorial of how to perform Gaussian Elimination</label><br><br>
-                        <video width="400" class="video" controls>
+                        <video width="500" class="video" controls>
                             <source src="Gaussian Elimination .mp4" type="video/mp4">
                         </video>
                         <p class="text2">
