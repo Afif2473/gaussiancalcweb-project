@@ -8,7 +8,7 @@ body{
 }
 
 
-.navbar{
+.nav{
     height: 80px;
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
@@ -71,22 +71,35 @@ label{
     color: rgb(165, 190, 213);;
 }
 
-.interface2{
-    width: 70%;
-    transform: translateY(-50px);
-    margin-left: 300px; ;
-    background: rgba(0, 0, 0, 0.8);
-    text-align: center;
-    
-}
-
 .interface3{
-    width: 65%;
-    transform: translateY(50px);
-    margin-left: 350px; ;
+    width: 30%;
+    height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
     background: rgba(0, 0, 0, 0.8);
     text-align: center;
     font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 40vh;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.switch{
+    position: absolute;
+    display: flex;
+    transform: translateY(-110px);
+    background-color: rgb(89, 97, 89);
+    border-radius:40px ;
+    height:28px;
+    width: auto; 
 }
 
 .center{
@@ -161,24 +174,6 @@ label{
 
 .matrix-element {
     margin-right: 30px;
-  }
-
-.container{
-    position: relative;
-    align-items: center;
-    padding: 50px 50px;
-    width: 60%;
-    transform: translateX(350px);
-    background: rgba(0, 0, 0, 0.8);
-}
-.switch{
-    position: absolute;
-    margin: 10px 530px;
-    display: flex;
-    background-color: rgb(89, 97, 89);
-    border-radius:40px ;
-    height:28px;
-    width: auto; 
 }
 
 .switch :after{
@@ -272,8 +267,13 @@ label{
     }
 
     .interface3{
+        width: 80%;
+        height: 30vh;
         margin-left: auto;
         margin-right: auto;
+        background: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        font-family: sans-serif;
     }
 
     .video{
@@ -282,27 +282,24 @@ label{
         width:200px
     }
 
-    .interface3 .h2{
-        text-align: center;
-    }
-
     .container{
-        position: inherit;
-        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
         align-items: center;
-        width: 100%;
-        transform: translateX(10px);
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: 40vh;
         background: rgba(0, 0, 0, 0.8);
     }
-
     .switch{
-        position: relative;
-        margin: 10px 530px;
+        position: absolute;
         display: flex;
+        transform: translateY(-140px);
         background-color: rgb(89, 97, 89);
         border-radius:40px ;
         height:28px;
-        width: auto;
-        
+        width: auto; 
     }
 }
+
