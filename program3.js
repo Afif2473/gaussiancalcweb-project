@@ -1,12 +1,9 @@
-// Get the button and target element by their respective IDs
 var toggleButton = document.getElementById("toggleButton");
 var toggleButton2 = document.getElementById("toggleButton2");
 var targetElement = document.getElementById("targetElement");
 var targetElement2 = document.getElementById("targetElement2");
 
-// Add a click event listener to the button
 toggleButton.addEventListener("click", function() {
-  // Toggle the visibility of the target element
   if (targetElement.style.display === "none") {
     targetElement.style.display = "block";
   } else {
@@ -15,7 +12,6 @@ toggleButton.addEventListener("click", function() {
 });
 
 toggleButton2.addEventListener("click", function() {
-    // Toggle the visibility of the target element
     if (targetElement2.style.display === "none") {
       targetElement2.style.display = "block";
     } else {
@@ -28,31 +24,28 @@ const solveBtn = document.querySelector(".solveBtn");
 const form = document.querySelector("#form");
 const Switch = document.querySelector(".switch");
 
-let current = 1;
-
-function tab2(){
+function solve(){
     form.style.marginLeft = "-100%";
     inverseBtn.style.background = "none";
     solveBtn.style.background =  "linear-gradient(45deg,#93e59e,#68aca0)";
-    Switch[current-1].classList.add("active");
+   
 }
 
-function tab1(){
+function inverse(){
     form.style.marginLeft = "0";
     solveBtn.style.background = "none";
     inverseBtn.style.background =  "linear-gradient(45deg,#93e59e,#68aca0)";
-    Switch[current-1].classList.remove("active");
 }
 
 function findInverse(A) {
     var n = A.length;
 
     // Create augmented matrix [A | I]
-    var augmentedMatrix = [];
+    var Matrix = [];
     for (var i = 0; i < n; i++) {
-        augmentedMatrix[i] = [];
+        Matrix[i] = [];
         for (var j = 0; j < 2 * n; j++) {
-            augmentedMatrix[i][j] = j < n ? A[i][j] : (j === (n + i) ? 1.0 : 0.0);
+            Matrix[i][j] = j < n ? A[i][j] : (j === (n + i) ? 1.0 : 0.0);
         }
     }
 
@@ -61,30 +54,30 @@ function findInverse(A) {
         // Find pivot row
         var pivotRow = i;
         for (var j = i + 1; j < n; j++) {
-            if (Math.abs(augmentedMatrix[j][i]) > Math.abs(augmentedMatrix[pivotRow][i])) {
+            if (Math.abs(Matrix[j][i]) > Math.abs(Matrix[pivotRow][i])) {
                 pivotRow = j;
             }
         }
 
         // Swap rows if necessary
         if (pivotRow !== i) {
-            var temp = augmentedMatrix[i];
-            augmentedMatrix[i] = augmentedMatrix[pivotRow];
-            augmentedMatrix[pivotRow] = temp;
+            var temp = Matrix[i];
+            Matrix[i] = Matrix[pivotRow];
+            Matrix[pivotRow] = temp;
         }
 
         // Scale pivot row to make leading element 1
-        var pivot = augmentedMatrix[i][i];
+        var pivot = Matrix[i][i];
         for (var j = i; j < 2 * n; j++) {
-            augmentedMatrix[i][j] /= pivot;
+            Matrix[i][j] /= pivot;
         }
 
         // Perform row operations to make other elements in the column zero
         for (var j = 0; j < n; j++) {
             if (j !== i) {
-                var factor = augmentedMatrix[j][i];
+                var factor = Matrix[j][i];
                 for (var k = i; k < 2 * n; k++) {
-                    augmentedMatrix[j][k] -= factor * augmentedMatrix[i][k];
+                    Matrix[j][k] -= factor * Matrix[i][k];
                 }
             }
         }
@@ -93,7 +86,9 @@ function findInverse(A) {
     // Extract the inverse matrix
     var inverseMatrix = [];
     for (var i = 0; i < n; i++) {
-        inverseMatrix[i] = augmentedMatrix[i].slice(n);
+        inverseMatrix[i] = Matrix[i].slice(n).map(function(num){
+            return num.toFixed(2);
+        });
     }
 
     return inverseMatrix;
@@ -102,7 +97,7 @@ function findInverse(A) {
 function solveLinearEquations(A, b) {
     var n = A.length;
 
-    // Create augmented matrix Ab
+    // Create Matrix Ab
     var Ab = [];
     for (var i = 0; i < n; i++) {
         Ab[i] = [];
@@ -142,6 +137,10 @@ function solveLinearEquations(A, b) {
             sum += Ab[i][j] * x[j];
         }
         x[i] = (Ab[i][n] - sum) / Ab[i][i];
+    }
+
+    for (var i = 0; i < x.length; i++) {
+        x[i] = x[i].toFixed(2);
     }
 
     return x;
