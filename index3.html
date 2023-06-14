@@ -19,16 +19,16 @@
             </div>
             <div class="everything" id="btnContainer">
                 <button type="button" id="toggleButton" class="startBtn">Start</button>
-                <div id="targetElement" style="display: none;">
+                <div id="targetElement" style="display: none;" class="tElement">
                     <div class="container">
                         <div class="switch">
                             <div class="inverseBtn" onclick="inverse();">inverse</div>
                             <div class="solveBtn" onclick="solve();">solve</div>
-                        </div>
+                        </div><br>
                 
                         <div class="outer">
                             <div id="form">
-                                <div id="page" class="inverse">
+                                <div id="page">
                                         <br><label class="h2">Choose size of matrix</label><br><br>
                                         <label for="rowsInputM" class="text">Number of Rows:</label>
                                         <input type="number" id="rowsInputM" class="custom-input1"><br>
@@ -42,14 +42,14 @@
                                         <div id="resultI" class="result"></div><br><br>
                                 </div>
                 
-                                <div id="page" class="solve">
+                                <div id="page">
                                     <label class="h2">Linear Equation Solver</label><br><br>
 
-                                    <label for="rowsInputLS" class="text">Enter the number of equations:</label>
+                                    <label for="rowsInputLS" class="text">Number of equations:</label>
                                     <input type="number" id="rowsInputLS" class="custom-input2">
                                     <button id="generateFieldsBtn" class="button">Next</button>
 
-                                    <div id="matrixInputLS" class="matrixInput"></div>
+                                    <br><br><div id="matrixInputLS"></div>
                                     <div id="bInput"></div>
 
                                     <button id="submitBtnSolve" class="button">Solve</button>
