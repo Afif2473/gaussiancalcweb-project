@@ -80,17 +80,19 @@ label{
     font-family: sans-serif;
 }
 
-.container{
+.tElement{
     position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 50px 50px;
-    width: 60%;
-    transform: translateX(350px);
+    margin-left: auto;
+    margin-right: auto;
     background: rgba(0, 0, 0, 0.8);
 }
+
 .switch{
     position: absolute;
-    margin: 10px 530px;
+    margin: 10px 320px;
     display: flex;
     background-color: rgb(89, 97, 89);
     border-radius:40px ;
@@ -113,11 +115,6 @@ label{
     width: 100%;
     text-align: center;
     transform: translateY(-100px);
-}
-
-.matrixInput{
-    margin-top: 20px;
-    text-emphasis-color: white;
 }
 
 .button{
@@ -143,11 +140,12 @@ label{
     padding: 7px;
     border: 0px solid;
     font-size: 15px;
+    border: 2px solid #0f2d1776;
     background-color: #55e5d093;
     width: 20px;
-    border-radius: 20px;
-    
+    border-radius: 20px;  
 }
+
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -259,7 +257,7 @@ label{
     }
   
     .h2, .text{
-    font-size: large;
+    font-size: 15px;
     }
 
     .interface3{
@@ -278,25 +276,45 @@ label{
         width:200px
     }
 
-    .container{
+    .custom-input1{
+        margin-left: auto;
+        padding: 7px;
+        border: 0px solid;
+        font-size: 12px;
+        border: 2px solid #0f2d1776;
+        background-color: #55e5d093;
+        width: 15px;
+        border-radius: 20px;
+        
+    }
+
+    .tElement{
         position: relative;
-        display: flex;
+        display:flex ;
         justify-content: center;
         align-items: center;
         margin-left: auto;
         margin-right: auto;
-        transform: translateX(-50px);
-        width: 100%;
-        height: 40vh;
         background: rgba(0, 0, 0, 0.8);
     }
+    
     .switch{
-        position: absolute;
-        display: flex;
-        transform: translateY(-190px);
+        position: relative;
+        transform: translateY(50px);
         background-color: rgb(89, 97, 89);
         border-radius:40px ;
         height:28px;
         width: auto;
     }
+
+    .button{
+        margin-top: 10px;
+        margin-left: 10px;
+        background : linear-gradient(45deg,#93e59e,#68aca0);
+        border-radius: 30px;
+        border-color: rgb(10, 80, 43);
+        font-size: 12px;
+    }
+    
 }
+
