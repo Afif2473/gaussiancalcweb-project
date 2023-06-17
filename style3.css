@@ -1,6 +1,6 @@
 body{
     background: url(bg2.jpg);
-    background-size:cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: 0px -70px;
     height: 200vh;
